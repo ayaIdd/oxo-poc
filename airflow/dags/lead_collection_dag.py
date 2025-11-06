@@ -11,17 +11,17 @@ with DAG(
 
     label = BashOperator(
         task_id='label_data',
-        bash_command='cd /home/aya/oxo-poc && python scripts/label.py'
+        bash_command='cd /home/aya/oxo-poc && /home/aya/airflow-env/bin/python scripts/label.py'
     )
 
     train = BashOperator(
         task_id='train_model',
-        bash_command='cd /home/aya/oxo-poc && python scripts/train.py'
+        bash_command='cd /home/aya/oxo-poc && /home/aya/airflow-env/bin/python scripts/train.py'
     )
 
     score = BashOperator(
-        task_id='score_leads', 
-        bash_command='cd /home/aya/oxo-poc && python scripts/score.py'
+        task_id='score_leads',
+        bash_command='cd /home/aya/oxo-poc && /home/aya/airflow-env/bin/python scripts/score.py'
     )
 
     label >> train >> score

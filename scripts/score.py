@@ -18,7 +18,7 @@ model = joblib.load(model_path)
 print("✅ Model loaded successfully")
 
 # Load new leads
-new_leads = pd.read_csv('restaurant_leads_synthetic.csv')
+new_leads = pd.read_csv('data/restaurant_leads_synthetic.csv')
 print(f"🎯 Scoring {len(new_leads)} new leads")
 
 # Apply same feature engineering as in label.py

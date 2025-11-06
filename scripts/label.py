@@ -6,7 +6,7 @@ import os
 print("🚀 Starting restaurant lead labeling...")
 
 # Load your synthetic data
-df = pd.read_csv('restaurant_leads_synthetic.csv')
+df = pd.read_csv('data/restaurant_leads_synthetic.csv')
 print(f"📊 Loaded {len(df)} restaurant leads")
 
 # Feature Engineering
